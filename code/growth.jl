@@ -40,6 +40,6 @@ parameters = Dict(:α => [1.0 1.0 1.0 ; 1.0 1.0 1.0 ; 1.0 1.0 1.0],  #competitio
 b = rand(3)
 tspan = (0.0, 100.0)
 
-prob = ODEProblem(compet_growth, b, tspan, parameters)
+prob = ODEProblem(competitive_growth, b, tspan, parameters)
 sol = solve(prob)
 plot(sol, labels = ["B1(t)" "B2(t)" "B3(t)"], ylabel = "biomass")
