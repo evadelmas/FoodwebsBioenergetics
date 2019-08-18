@@ -6,7 +6,7 @@ using DifferentialEquations, ParameterizedFunctions, Plots
 
 # Logistic growth
 
-f = @ode_def logistic_growth begin
+f = @ode_def begin
     dx = r * (1 - (x / K)) * x
 end r K
 
